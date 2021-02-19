@@ -1,0 +1,9 @@
+I:\TaVazando\UITests\bin\Release\TaVazando.UITests.dll
+I:\TaVazando\UITests\bin\Release\TaVazando.UITests.pdb
+I:\TaVazando\UITests\bin\Release\nunit.framework.dll
+I:\TaVazando\UITests\bin\Release\Xamarin.UITest.dll
+I:\TaVazando\UITests\bin\Release\Xamarin.UITest.xml
+I:\TaVazando\UITests\bin\Release\nunit.framework.xml
+I:\TaVazando\UITests\obj\Release\TaVazando.UITests.csprojResolveAssemblyReference.cache
+I:\TaVazando\UITests\obj\Release\TaVazando.UITests.dll
+I:\TaVazando\UITests\obj\Release\TaVazando.UITests.pdb

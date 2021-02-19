@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TaVazando.frmMain">
+	<ContentPage.Content>
+
+		
+
+		<!-- main container -->	
+		<StackLayout Style="{StaticResource main_container_dashboard_color}" x:Name="main_container" Spacing="0" Padding="0">
+
+			<!--- popup-->
+			<AbsoluteLayout x:Name="ctrlPopup" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="false" BackgroundColor="White" >
+			</AbsoluteLayout>
+
+			<!--- popup cep-->
+			<AbsoluteLayout x:Name="ctrlPopupCEP" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="false" BackgroundColor="White" >
+			</AbsoluteLayout>
+
+			<!--- popup-->
+			<AbsoluteLayout x:Name="ctrlPopUpBusy" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="false" BackgroundColor="Black"  HeightRequest="80">
+			</AbsoluteLayout>
+
+			
+			<StackLayout x:Name="controls"  Spacing="0" Padding="0">
+			<!-- header-->
+			<StackLayout Style="{StaticResource dynamic_toolbar}" Orientation="Horizontal" Padding="10" Spacing="10">
+				<Image Style="{StaticResource toolbar_icon}"/>
+				<Label Text="TáVazando!" Style="{StaticResource toolbar_text}"/>
+				<ActivityIndicator x:Name="activityIndicator" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30"/>
+				<Image Style="{StaticResource icon_help}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="20" x:Name="helpLinker"/>
+			</StackLayout>
+
+			<!-- content -->
+
+			<StackLayout Padding="0" BackgroundColor="White" VerticalOptions="FillAndExpand" Spacing="10">
+
+				<ScrollView BackgroundColor="White" VerticalOptions="StartAndExpand">
+
+					<StackLayout Padding="10" BackgroundColor="White" VerticalOptions="Start" Orientation="Vertical" Spacing="0">
+
+						<Label x:Name="Signal" Style="{StaticResource section_title}" HorizontalOptions="Start" VerticalOptions="Center" IsVisible="false"/>
+
+						<StackLayout VerticalOptions="StartAndExpand" Orientation="Horizontal" Spacing="20">
+							<Image Source="ic_picture_icon.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="82" HeightRequest="82" x:Name="btSnapshot"/>
+							<Label x:Name="lblSnapshotGuidance" Text="CLIQUE NO ÍCONE PARA TIRAR UMA FOTO." Style="{StaticResource section_title}" HorizontalOptions="Start" VerticalOptions="Center"/>
+						</StackLayout>
+
+						<BoxView Style="{StaticResource vertical_margin}" />
+
+						<Label Text="TIPO DE OCORRÊNCIA" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Bold" IsVisible="false" x:Name="lblOcorrencia"/>
+						<BoxView Style="{StaticResource hr}"  IsVisible="false"/>
+					
+
+						<StackLayout Padding="5,5,0,0" BackgroundColor="White" VerticalOptions="Start" Orientation="Horizontal" x:Name="clickArea" >
+							<StackLayout WidthRequest="22" HeightRequest="24" Padding="5,5,0,0" Spacing="0">
+								<Image Style="{StaticResource icon_appointment}" HorizontalOptions="StartAndExpand" />
+							</StackLayout>
+							<Label x:Name="lblDescricaoOcorrencia" Text="ESCOLHA UMA CATEGORIA" Style="{StaticResource regular_text}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+							<Image x:Name="btSeletor" Style="{StaticResource icon_seletor}" HorizontalOptions="EndAndExpand" WidthRequest="32" HeightRequest="32"/>
+						</StackLayout>
+
+
+						<BoxView Style="{StaticResource vertical_margin}" />
+
+						<Label Text="DESCRICAO DA OCORRÊNCIA" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  FontAttributes="Bold" IsVisible="false"/>
+
+						<BoxView Style="{StaticResource hr}" />
+						<StackLayout Padding="5,5,0,0" BackgroundColor="White" VerticalOptions="StartAndExpand" Orientation="Horizontal" >
+							<StackLayout WidthRequest="22" HeightRequest="24" Padding="5,5,0,0" Spacing="0">
+								<Image Style="{StaticResource icon_description}" HorizontalOptions="Start" WidthRequest="18" />
+							</StackLayout>
+							<Entry x:Name="entDescricao" Placeholder="OBSERVAÇÂO" Style="{StaticResource entry_color}" HorizontalOptions="Start"/>
+						</StackLayout>
+
+						<BoxView Style="{StaticResource hr}" />
+						<StackLayout Padding="5" BackgroundColor="White" VerticalOptions="Start" Orientation="Horizontal" >
+							<StackLayout WidthRequest="20" HeightRequest="22" Padding="5,5,0,0" Spacing="0">
+								<Image Style="{StaticResource icon_location}" HorizontalOptions="Start"/>
+							</StackLayout>
+							<Label x:Name="lblEndereco" Text="RUA" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+						</StackLayout>
+
+						<StackLayout Padding="5" BackgroundColor="White" VerticalOptions="Start" Orientation="Horizontal" >
+							<StackLayout WidthRequest="20" HeightRequest="22" Padding="5,5,0,0" Spacing="0"/>
+							<Label x:Name="lblCidade" Text="CIDADE" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+						</StackLayout>
+
+						<StackLayout Padding="5" BackgroundColor="White" VerticalOptions="Start" Orientation="Horizontal" >
+							<StackLayout WidthRequest="20" HeightRequest="22" Padding="5,5,0,0" Spacing="0"/>
+							<Label x:Name="lblCEP" Text="CEP" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+						</StackLayout>
+
+						<BoxView Style="{StaticResource hr}" />
+						<StackLayout Padding="5" BackgroundColor="White" VerticalOptions="Start" Orientation="Horizontal">
+							<StackLayout WidthRequest="10" HeightRequest="22" Padding="5,5,0,0" Spacing="0"/>
+							<Entry x:Name="entCEP" Style="{StaticResource entry_color}" Placeholder="Clique aqui para corrigir o CEP" Keyboard="Numeric" HorizontalOptions="Start" TextChanged="cepCorrigidoChange"/>
+							<Image x:Name="btSeletorCEP" Style="{StaticResource icon_search}" HorizontalOptions="EndAndExpand" WidthRequest="32" HeightRequest="32"/>
+						</StackLayout>
+
+						<!-- desabilitado-->
+						<StackLayout IsVisible="false">
+							<BoxView Style="{StaticResource vertical_margin}" />
+							<Label Text="LOCALIZAÇÃO ATUAL" Style="{StaticResource section_title}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  FontAttributes="Bold"/>
+							<BoxView Style="{StaticResource hr}" />
+							<BoxView Style="{StaticResource vertical_margin}" />
+						</StackLayout>
+
+						<BoxView Style="{StaticResource hr}" />
+
+						<BoxView Style="{StaticResource vertical_margin}" />
+						<StackLayout HorizontalOptions="StartAndExpand" x:Name="StackMap" HeightRequest="150"></StackLayout>
+						<BoxView Style="{StaticResource vertical_margin}" />
+
+					</StackLayout>
+				</ScrollView>
+
+			</StackLayout>
+			</StackLayout>
+			<!-- complements -->
+			<StackLayout Padding="10" VerticalOptions="EndAndExpand" BackgroundColor="White" HorizontalOptions="FillAndExpand" x:Name="btnPublicar"  >
+				<Button Text="REPORTAR PROBLEMA" Style="{StaticResource button}" x:Name="btSelected" IsEnabled="true" Clicked="PublicarOcorrencia"></Button>
+			</StackLayout>
+
+
+
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

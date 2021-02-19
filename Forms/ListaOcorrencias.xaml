@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TaVazando.ListaOcorrencias">
+	<ContentPage.Content>
+		<StackLayout Style="{StaticResource main_container_dashboard_color}" x:Name="main_container" Spacing="0" Padding="0">
+
+			<!-- header-->
+			<StackLayout Style="{StaticResource dynamic_toolbar}" Orientation="Horizontal" Padding="10" Spacing="10">
+				<Image Style="{StaticResource toolbar_icon}"/>
+				<Label Text="Tipos de Ocorrência" Style="{StaticResource toolbar_text}"/>
+			</StackLayout>
+
+			<!-- content -->
+			<StackLayout Padding="0" VerticalOptions="FillAndExpand" x:Name="listContainer">
+			</StackLayout>
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

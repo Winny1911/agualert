@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.swellitsolutions.tavazando" android:versionName="1.0i" android:versionCode="6">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
+	<application android:label="TaVazando" android:icon="@drawable/ic_launcher" android:screenOrientation="portrait">
+		<!--chave da api de teste AIzaSyD9EGfs_fhJ0bj4ZrifM8KCPbg8yLoHrxk-->
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCkMjtc1Ik4dJQsyQmzfEzYBlqcMEndvjE" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	</application>
+	<activity android:configChanges="orientation|screenSize" android:label="ActivityLoader" android:name="md5c71a515a8be7355c4f6dda08782cceb9.ActivityLoader" />
+	<activity android:configChanges="orientation|screenSize" android:label="TaVazando" android:theme="@style/Theme.Splash" android:name="md5c71a515a8be7355c4f6dda08782cceb9.MainActivity">
+		<intent-filter>
+			<action android:name="android.intent.action.MAIN" />
+			<category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+	</activity>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+</manifest>

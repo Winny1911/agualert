@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TaVazando.StatusConexao">
+	<ContentPage.Content>
+	<!-- main container -->	
+		<StackLayout Style="{StaticResource main_container_empty_color}" x:Name="main_container" Spacing="30" Padding="20">
+			<!-- content -->
+			<StackLayout Padding="20" VerticalOptions="FillAndExpand" Orientation="Vertical" Spacing="20">
+				<Image Style="{StaticResource icon_wifi}" />
+				<Label x:Name="lblMensagem" VerticalOptions="StartAndExpand" Style="{StaticResource message_text}"/>
+			</StackLayout>
+
+			<!-- complements -->
+			<StackLayout Padding="10" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  >
+				<Button Text="ENCERRAR" Style="{StaticResource button}" x:Name="btFinish" ></Button>
+			</StackLayout>
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

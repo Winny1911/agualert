@@ -1,0 +1,8 @@
+I:\TaVazando\UITests\bin\Debug\TaVazando.UITests.dll
+I:\TaVazando\UITests\bin\Debug\TaVazando.UITests.pdb
+I:\TaVazando\UITests\bin\Debug\nunit.framework.dll
+I:\TaVazando\UITests\bin\Debug\Xamarin.UITest.dll
+I:\TaVazando\UITests\bin\Debug\Xamarin.UITest.xml
+I:\TaVazando\UITests\bin\Debug\nunit.framework.xml
+I:\TaVazando\UITests\obj\Debug\TaVazando.UITests.dll
+I:\TaVazando\UITests\obj\Debug\TaVazando.UITests.pdb
